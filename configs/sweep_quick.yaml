@@ -1,0 +1,24 @@
+seeds: [42]
+datasets:
+  - name: synthetic_gaussian
+    n_samples: 2000
+    n_features: 12
+    contamination: 0.03
+    outlier_mode: scattered
+  - name: digits_oneclass
+    normal_digit: 1
+models:
+  - name: robust_zscore
+  - name: isolation_forest
+    n_estimators: 300
+  - name: lof
+    n_neighbors: 35
+  - name: ocsvm
+    nu: 0.05
+    kernel: rbf
+    gamma: scale
+report_path: reports/leaderboard.csv
+write_markdown: true
+markdown_path: reports/leaderboard.md
+sort_by: pr_auc
+top_n: 50

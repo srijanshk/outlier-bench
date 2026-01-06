@@ -1,0 +1,10 @@
+seed: 42
+dataset:
+  name: digits_oneclass
+  normal_digit: 1
+model:
+  name: lof
+  contamination_hint: null
+  n_neighbors: 35
+report:
+  path: reports/leaderboard.csv

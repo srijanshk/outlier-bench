@@ -1,0 +1,12 @@
+seed: 42
+dataset:
+  name: synthetic_gaussian
+  n_samples: 8000
+  n_features: 12
+  contamination: 0.03
+model:
+  name: isolation_forest
+  contamination_hint: 0.03
+  n_estimators: 300
+report:
+  path: reports/leaderboard.csv
